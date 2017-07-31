@@ -1,0 +1,163 @@
+/*reset css*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, "Hiragino Sans GB W3", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #F0F0F0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*tabs导航行条*/
+.tabs {
+    z-index: 10;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    padding: 0 5px;
+    height: 42px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .12);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .12);
+    overflow: hidden;
+}
+
+.tabs_scroll {
+    width: 100%;
+    /*高度要大于42px，不然滚动时将会显示下方的滚动条*/
+    height: 60px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabs_container {
+    position: relative;
+    overflow: hidden;
+}
+
+.tabs_list {
+    float: left;
+    /*解决inline-block元素之间的间隙*/
+    font-size: 0;
+    /*inline-block一行显示*/
+    white-space: nowrap;
+}
+
+.tabs_item {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 42px;
+    min-width: 50px;
+    line-height: 42px;
+    text-align: center;
+    padding: 0 8px;
+    font-size: 16px;
+    color: #666666;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    -ms-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+}
+
+.tabs_item_active {
+    color: #ec1c43;
+}
+
+.tabs_line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #ec1c43;
+    -webkit-transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+}
+
+/*tab内容展示*/
+.content {
+    overflow: hidden;
+}
+
+.content_list {
+    float: left;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.content_list_transition {
+    -webkit-transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+}
+
+.content_item {
+    display: inline-block;
+    width: 375px;
+    vertical-align: top;
+}
+
+.activity_item {
+    margin-bottom: 5px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.activity_img {
+    position: relative;
+    padding-bottom: 40%;
+    background-color: #eeeeee;
+}
+
+.activity_img img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.activity_info {
+    height: 28px;
+    padding: 0 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.goods_discount {
+    padding: 1px 3px;
+    height: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background-color: #FB797B;
+    border-radius: 2px;
+}
+
+.goods_sell {
+    -webkit-box-flex: 1;
+    -wekit-flex: 1;
+    flex: 1;
+    text-align: right;
+}
+
+.sell_info {
+    font-weight: 700;
+    color: #F61D4B;
+    margin-right: 2px;
+}
+
+.sell_unit {
+    margin-right: 5px;
+}
