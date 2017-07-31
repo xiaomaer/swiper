@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.images_container, .image_container_transition {
+    -webkit-transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+}
+
+.image_container {
+    position: relative;
+    z-index: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
